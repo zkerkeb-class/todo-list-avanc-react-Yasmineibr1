@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 function useTasks() {
   const [tasks, setTasks] = useState(() => {
@@ -10,23 +10,23 @@ function useTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  const addTask = (text) => {
+  const addTask = useCallback((text) => {
     if (text.trim()) {
-      setTasks([...tasks, { text, completed: false }]);
+      setTasks((prevTasks) => [...prevTasks, { text, completed: false }]);
     }
-  };
+  }, []);
 
-  const removeTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
-  };
+  const removeTask = useCallback((index) => {
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
+  }, []);
 
-  const toggleTask = (index) => {
-    setTasks(
-      tasks.map((task, i) =>
+  const toggleTask = useCallback((index) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task, i) =>
         i === index ? { ...task, completed: !task.completed } : task
       )
     );
-  };
+  }, []);
 
   return { tasks, addTask, removeTask, toggleTask };
 }
