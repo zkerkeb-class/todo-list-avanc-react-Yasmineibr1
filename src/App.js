@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import useTasks from "./hooks/useTasks";
 
 function App() {
   const { tasks, addTask, removeTask, toggleTask } = useTasks();
   const [newTask, setNewTask] = useState("");
+  const [filter, setFilter] = useState("all");
 
-  const handleAddTask = () => {
-    addTask(newTask);
-    setNewTask("");
-  };
+  const filteredTasks = useMemo(() => {
+    if (filter === "completed") {
+      return tasks.filter((task) => task.completed);
+    } else if (filter === "uncompleted") {
+      return tasks.filter((task) => !task.completed);
+    }
+    return tasks;
+  }, [tasks, filter]);
 
   return (
     <div>
@@ -18,9 +23,16 @@ function App() {
         onChange={(e) => setNewTask(e.target.value)}
         placeholder="Add a new task"
       />
-      <button onClick={handleAddTask}>Add Task</button>
+      <button onClick={() => addTask(newTask)}>Add Task</button>
+
+      <div>
+        <button onClick={() => setFilter("all")}>All</button>
+        <button onClick={() => setFilter("completed")}>Completed</button>
+        <button onClick={() => setFilter("uncompleted")}>Uncompleted</button>
+      </div>
+
       <ul>
-        {tasks.map((task, index) => (
+        {filteredTasks.map((task, index) => (
           <li key={index}>
             <span
               style={{
