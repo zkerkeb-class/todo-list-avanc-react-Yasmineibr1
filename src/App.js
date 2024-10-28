@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import useTasks from "./hooks/useTasks";
+import "./App.css"; 
 
 function App() {
   const { tasks, addTask, removeTask, toggleTask } = useTasks();
@@ -16,19 +17,21 @@ function App() {
   }, [tasks, filter]);
 
   return (
-    <div>
+    <div className="todo-list">
       <h1>Todo List</h1>
+      <div className="input-container">
       <input
+      type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
         placeholder="Add a new task"
       />
       <button onClick={() => addTask(newTask)}>Add Task</button>
-
+      </div>
       <div>
-        <button onClick={() => setFilter("all")}>All</button>
-        <button onClick={() => setFilter("completed")}>Completed</button>
-        <button onClick={() => setFilter("uncompleted")}>Uncompleted</button>
+        <button className="button-all" onClick={() => setFilter("all")}>All</button>
+        <button className="button-completed" onClick={() => setFilter("completed")}>Completed</button>
+        <button className="button-uncompleted" onClick={() => setFilter("uncompleted")}>Uncompleted</button>
       </div>
 
       <ul>
