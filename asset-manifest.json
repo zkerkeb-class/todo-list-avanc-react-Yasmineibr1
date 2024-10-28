@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/todo-list-avanc-react-Yasmineibr1/static/css/main.c4882d8c.css",
-    "main.js": "/todo-list-avanc-react-Yasmineibr1/static/js/main.359eb5ca.js",
-    "static/js/453.fb188ffa.chunk.js": "/todo-list-avanc-react-Yasmineibr1/static/js/453.fb188ffa.chunk.js",
-    "index.html": "/todo-list-avanc-react-Yasmineibr1/index.html",
-    "main.c4882d8c.css.map": "/todo-list-avanc-react-Yasmineibr1/static/css/main.c4882d8c.css.map",
-    "main.359eb5ca.js.map": "/todo-list-avanc-react-Yasmineibr1/static/js/main.359eb5ca.js.map",
-    "453.fb188ffa.chunk.js.map": "/todo-list-avanc-react-Yasmineibr1/static/js/453.fb188ffa.chunk.js.map"
+    "main.css": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/css/main.c4882d8c.css",
+    "main.js": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/js/main.15d8d3c2.js",
+    "static/js/453.fb188ffa.chunk.js": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/js/453.fb188ffa.chunk.js",
+    "index.html": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/index.html",
+    "main.c4882d8c.css.map": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/css/main.c4882d8c.css.map",
+    "main.15d8d3c2.js.map": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/js/main.15d8d3c2.js.map",
+    "453.fb188ffa.chunk.js.map": "/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git/static/js/453.fb188ffa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4882d8c.css",
-    "static/js/main.359eb5ca.js"
+    "static/js/main.15d8d3c2.js"
   ]
 }
