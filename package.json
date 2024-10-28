@@ -20,7 +20,7 @@
     "predeploy": "npm run build", 
     "deploy": "gh-pages -d build" 
   },
-"homepage": "https://Yasmineibr1.github.io/todo-list-avanc-react-Yasmineibr1",
+  "homepage": "https://github.com/zkerkeb-class/todo-list-avanc-react-Yasmineibr1.git",
 
   "eslintConfig": {
     "extends": [
