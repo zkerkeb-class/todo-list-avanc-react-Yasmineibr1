@@ -20,7 +20,8 @@
     "predeploy": "npm run build", 
     "deploy": "gh-pages -d build" 
   },
-  "homepage": "https://Yasmineibr1.github.io/todo-list-app_yi",
+"homepage": "https://Yasmineibr1.github.io/todo-list-avanc-react-Yasmineibr1",
+
   "eslintConfig": {
     "extends": [
       "react-app",
